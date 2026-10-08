@@ -1,0 +1,58 @@
+<!-- ========================================
+     SNIPPET DE INTEGRAÇÃO DAS MELHORIAS
+     Cole este código antes do </head> em cada HTML
+     ======================================== -->
+
+<!-- CSS de Melhorias -->
+<link rel="stylesheet" href="../css/improvements.css">
+
+<!-- Performance: Preload de recursos críticos -->
+<link rel="preload" href="../css/site.css" as="style">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- SEO Melhorado -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph para Redes Sociais -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="[NOME DO SITE]">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon melhorado -->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+
+<!-- ========================================
+     Cole este código antes do </body>
+     ======================================== -->
+
+<!-- JavaScript de Melhorias -->
+<script src="../src/improvements.js"></script>
+
+<!-- Adiciona classe de tema ao body -->
+<script>
+// Detecta qual tema/site está ativo
+if (window.location.pathname.includes('alencar-prado')) {
+  document.body.classList.add('theme-law');
+  document.documentElement.style.setProperty('--primary', '#C9A55B');
+  document.documentElement.style.setProperty('--primary-dark', '#b8923a');
+} else if (window.location.pathname.includes('pao-de-casa')) {
+  document.body.classList.add('theme-bakery');
+  document.documentElement.style.setProperty('--primary', '#8B4513');
+  document.documentElement.style.setProperty('--accent', '#D2691E');
+} else if (window.location.pathname.includes('casa-lume')) {
+  document.body.classList.add('theme-shop');
+  document.documentElement.style.setProperty('--primary', '#8B7355');
+  document.documentElement.style.setProperty('--accent', '#C19A6B');
+}
+</script>
+
+<!-- Adiciona lazy loading às imagens -->
+<script>
+document.querySelectorAll('img:not([loading])').forEach(img => {
+  img.setAttribute('loading', 'lazy');
+});
+</script>
